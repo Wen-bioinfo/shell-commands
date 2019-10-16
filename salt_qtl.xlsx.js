@@ -1,0 +1,222 @@
+var data = [
+  {
+    "LOD": 3.5, 
+    "Trait": "SESI", 
+    "R2 (%)": 10.6, 
+    "Chr": "chr2", 
+    "Position (cM)": 60.8, 
+    "Position of flanking markers (cM)": "40.1–88.3", 
+    "QTL name": "qSESI2.1", 
+    "Additive effect (DPE)": "−2.130(I)", 
+    "Flanking markers": "id2004774–id2007526"
+  }, 
+  {
+    "LOD": 3.98, 
+    "Trait": "SESI", 
+    "R2 (%)": 12.0, 
+    "Chr": "chr6", 
+    "Position (cM)": 52.5, 
+    "Position of flanking markers (cM)": "52.1–65.6", 
+    "QTL name": "qSESI6.1", 
+    "Additive effect (DPE)": "1.121(H)", 
+    "Flanking markers": "ud6000572–id6009055"
+  }, 
+  {
+    "LOD": 3.54, 
+    "Trait": "SESI", 
+    "R2 (%)": 10.7, 
+    "Chr": "chr12", 
+    "Position (cM)": 84.9, 
+    "Position of flanking markers (cM)": "70.2–93.9", 
+    "QTL name": "qSESI12.1", 
+    "Additive effect (DPE)": "−1.443(I)", 
+    "Flanking markers": "id12005823–d12007988"
+  }, 
+  {
+    "LOD": 3.67, 
+    "Trait": "SESF", 
+    "R2 (%)": 11.1, 
+    "Chr": "chr2", 
+    "Position (cM)": 64.8, 
+    "Position of flanking markers (cM)": "40.1–88.3", 
+    "QTL name": "qSESF2.1", 
+    "Additive effect (DPE)": "−2.145(I)", 
+    "Flanking markers": "id2004774–id2007526"
+  }, 
+  {
+    "LOD": 3.52, 
+    "Trait": "SESF", 
+    "R2 (%)": 10.6, 
+    "Chr": "chr12", 
+    "Position (cM)": 6.9, 
+    "Position of flanking markers (cM)": "2.9–12.8", 
+    "QTL name": "qSESF12.1", 
+    "Additive effect (DPE)": "−1.332(I)", 
+    "Flanking markers": "id12000252–id12001321"
+  }, 
+  {
+    "LOD": 4.04, 
+    "Trait": "RL", 
+    "R2 (%)": 12.1, 
+    "Chr": "chr6", 
+    "Position (cM)": 18.5, 
+    "Position of flanking markers (cM)": "12.3–27.0", 
+    "QTL name": "qRL6.1", 
+    "Additive effect (DPE)": "1.496(H)", 
+    "Flanking markers": "fd13–id6004343"
+  }, 
+  {
+    "LOD": 3.81, 
+    "Trait": "RL", 
+    "R2 (%)": 11.5, 
+    "Chr": "chr12", 
+    "Position (cM)": 6.9, 
+    "Position of flanking markers (cM)": "2.9–12.8", 
+    "QTL name": "qRL12.1", 
+    "Additive effect (DPE)": "2.378(H)", 
+    "Flanking markers": "id12000252–id12001321"
+  }, 
+  {
+    "LOD": 7.21, 
+    "Trait": "SL", 
+    "R2 (%)": 20.6, 
+    "Chr": "chr1", 
+    "Position (cM)": 162.6, 
+    "Position of flanking markers (cM)": "158.1–163.5", 
+    "QTL name": "qSL1.1", 
+    "Additive effect (DPE)": "5.262(H)", 
+    "Flanking markers": "id1023892–id1024836"
+  }, 
+  {
+    "LOD": 3.93, 
+    "Trait": "SL", 
+    "R2 (%)": 11.8, 
+    "Chr": "chr1", 
+    "Position (cM)": 168.6, 
+    "Position of flanking markers (cM)": "164.5–170.3", 
+    "QTL name": "qSL1.2", 
+    "Additive effect (DPE)": "4.049(H)", 
+    "Flanking markers": "id1024972–id1025983"
+  }, 
+  {
+    "LOD": 4.04, 
+    "Trait": "SL", 
+    "R2 (%)": 12.1, 
+    "Chr": "chr6", 
+    "Position (cM)": 18.5, 
+    "Position of flanking markers (cM)": "12.3–27.0", 
+    "QTL name": "qSL6.1", 
+    "Additive effect (DPE)": "3.631(H)", 
+    "Flanking markers": "fd13–id6004343"
+  }, 
+  {
+    "LOD": 3.24, 
+    "Trait": "SL", 
+    "R2 (%)": 9.8, 
+    "Chr": "chr12", 
+    "Position (cM)": 6.9, 
+    "Position of flanking markers (cM)": "2.9–12.8", 
+    "QTL name": "qSL12.1", 
+    "Additive effect (DPE)": "5.34(H)", 
+    "Flanking markers": "id12000252–id12001321"
+  }, 
+  {
+    "LOD": 4.28, 
+    "Trait": "SFW", 
+    "R2 (%)": 12.8, 
+    "Chr": "chr4", 
+    "Position (cM)": 18.1, 
+    "Position of flanking markers (cM)": "9.8–18.2", 
+    "QTL name": "qSFW4.1", 
+    "Additive effect (DPE)": "0.571(H)", 
+    "Flanking markers": "id4001113–id4001932"
+  }, 
+  {
+    "LOD": 4.2, 
+    "Trait": "SFW", 
+    "R2 (%)": 12.6, 
+    "Chr": "chr9", 
+    "Position (cM)": 27.0, 
+    "Position of flanking markers (cM)": "26.4–30.1", 
+    "QTL name": "qSFW9.1", 
+    "Additive effect (DPE)": "0.684(H)", 
+    "Flanking markers": "id9001614–id9002014"
+  }, 
+  {
+    "LOD": 3.11, 
+    "Trait": "SFW", 
+    "R2 (%)": 9.5, 
+    "Chr": "chr12", 
+    "Position (cM)": 6.9, 
+    "Position of flanking markers (cM)": "2.9–12.8", 
+    "QTL name": "qSFW12.1", 
+    "Additive effect (DPE)": "0.343(H)", 
+    "Flanking markers": "id12000252–id12001321"
+  }, 
+  {
+    "LOD": 3.38, 
+    "Trait": "RFW", 
+    "R2 (%)": 10.3, 
+    "Chr": "chr4", 
+    "Position (cM)": 98.1, 
+    "Position of flanking markers (cM)": "91.4–99.16", 
+    "QTL name": "qRFW4.1", 
+    "Additive effect (DPE)": "0.100(H)", 
+    "Flanking markers": "id4007444–id4008092"
+  }, 
+  {
+    "LOD": 3.34, 
+    "Trait": "RFW", 
+    "R2 (%)": 10.1, 
+    "Chr": "chr9", 
+    "Position (cM)": 27.0, 
+    "Position of flanking markers (cM)": "26.4–30.1", 
+    "QTL name": "qRFW9.1", 
+    "Additive effect (DPE)": "0.281(H)", 
+    "Flanking markers": "id9001614–id9002014"
+  }, 
+  {
+    "LOD": 3.84, 
+    "Trait": "SDW", 
+    "R2 (%)": 11.6, 
+    "Chr": "chr2", 
+    "Position (cM)": 62.8, 
+    "Position of flanking markers (cM)": "40.1–88.3", 
+    "QTL name": "qSDW2.1", 
+    "Additive effect (DPE)": "0.132(H)", 
+    "Flanking markers": "id2004774–id2007526"
+  }, 
+  {
+    "LOD": 3.07, 
+    "Trait": "SDW", 
+    "R2 (%)": 9.4, 
+    "Chr": "chr8", 
+    "Position (cM)": 98.6, 
+    "Position of flanking markers (cM)": "90.4–103.4", 
+    "QTL name": "qSDW8.1", 
+    "Additive effect (DPE)": "0.072(H)", 
+    "Flanking markers": "id8006485–wd8004122"
+  }, 
+  {
+    "LOD": 3.06, 
+    "Trait": "SDW", 
+    "R2 (%)": 9.3, 
+    "Chr": "chr12", 
+    "Position (cM)": 6.9, 
+    "Position of flanking markers (cM)": "2.9–12.8", 
+    "QTL name": "qSDW12.1", 
+    "Additive effect (DPE)": "0.071(H)", 
+    "Flanking markers": "id12000252–id12001321"
+  }, 
+  {
+    "LOD": 3.29, 
+    "Trait": "RDW", 
+    "R2 (%)": 10.0, 
+    "Chr": "chr4", 
+    "Position (cM)": 18.1, 
+    "Position of flanking markers (cM)": "9.8–18.2", 
+    "QTL name": "qRDW4.1", 
+    "Additive effect (DPE)": "0.022(H)", 
+    "Flanking markers": "id4001113–id4001932"
+  }
+]
