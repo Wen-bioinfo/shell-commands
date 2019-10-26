@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+		</title>
+		<!--jQuery 引入-->
+		<script src="jquery-3.4.1.min.js">
+		</script>
+		<!--DataTables 引入-->
+		<link rel="stylesheet" href="jquery.dataTables.min.css">
+		<script src="jquery.dataTables.min.js">
+		</script>
+		<!--DataTables搜索框查询结果高亮显示-->
+		<script src="jquery.highlight.js"> </script>
+		<!--DataTables搜索内容后高亮显示-->		
+		<style>
+			.highlight {
+				background-color: skyblue5
+			}
+			.header {
+				padding: 80px;
+				text-align: center;
+			}			
+			.navbar {
+				overflow: hidden;
+				background-color: #333;
+			}
+			.navbar a {
+				float: left;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 20px;
+				text-decoration: none;
+			}
+			.navbar a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			.main {
+				flex: 80%;
+				padding-bottom: 100px;
+				background-color: white;
+				padding: 20px;
+			}
+			.footer {
+				padding: 20px;
+				text-align: center;
+				background: #f1f1f1;
+			}
+			</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Quantitative Trait Locus</h1>
+		</div>
+		<div class="navbar">
+			<a href="home.html">Home</a>
+			<a href="Gene_plain.html">Gene</a>
+			<a href="#">QTL</a>
+		</div>
+		<div class="main">
+		<table id="table" class="display">
+		<thead>
+			<tr>
+				<th>Trait</th>
+				<th>Development stage</th>
+				<th>QTL name</th>
+				<th>Chromosome</th>
+				<th>Flanking markers</th>
+				<th>Position of flanking markers (cM)</th>
+				<th>Peak position (cM)</th>
+				<th>Physical position of homogeneous SNP (bp)</th>
+				<th>Homogeneous SNP Gene ID</th>
+				<th>LOD</th>
+				<th>R2 (%)</th>
+				<th>mapping population (resistance x susceptible)</th>
+				<th>Direction of phenotypic effect</th>
+				<th>Reference</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+		<table>
+		<!--DataTables数据源-->
+			<script src="QTL_plain.xlsx.js"></script>
+			<!--DataTables设置-->
+			<script>
+				$(document).ready(function(){
+					var table=$('#table').DataTable({
+						data:data,
+						columns:[
+						{data:'Trait'},
+						{data:'Development stage'},
+						{data:'QTL name'},
+						{data:'Chromosome'},
+						{data:'Flanking markers'},
+						{data:'Position of flanking markers (cM)'},
+						{data:'Peak position (cM)'},
+						{data:'Physical position of homogeneous SNP (bp)'},
+						{data:'Homogeneous SNP Gene ID'},
+						{data:'LOD'},
+						{data:'R2 (%)'},
+						{data:'mapping population (resistance x susceptible)'},
+						{data:'Direction of phenotypic effect'},
+						{data:'Reference'}
+						]
+					})
+				});
+			</script>
+		</div>
+		<h3>References</h3>
+			<ol>			
+<li>Ammar, M.H.M., Pandit, A., Singh, R.K., Sameena, S., Chauhan, M.S., Singh, A.K., Sharma, P.C., Gaikwad, K., Sharma, T.R., Mohapatra, T., et al. (2009). Mapping of QTLs Controlling Na+, K+ and CI− Ion Concentrations in Salt Tolerant Indica Rice Variety CSR27. Journal of Plant Biochemistry and Biotechnology 18, 139-150.</li>
+<li>Bizimana, J.B., Luzi-Kihupi, A., R, W.M., and Singh, R.K. (2017). Identification of quantitative trait loci for salinity tolerance in rice (Oryza sativa L.) using IR29/Hasawi mapping population. J Genet 96, 571-582.</li>
+<li>Cheng, L., Wang, Y., Meng, L., Hu, X., Cui, Y., Sun, Y., Zhu, L., Ali, J., Xu, J., and Li, Z. (2012). Identification of salt-tolerant QTLs with strong genetic background effect using two sets of reciprocal introgression lines in rice. Genome 55, 45-55.</li>
+<li>De Leon, T.B., Linscombe, S., and Subudhi, P.K. (2016). Molecular Dissection of Seedling Salinity Tolerance in Rice (Oryza sativa L.) Using a High-Density GBS-Based SNP Linkage Map. Rice (N Y) 9, 52.</li>
+<li>Flowers, T.J., Koyama, M.L., Flowers, S.A., Sudhakar, C., Singh, K.P., and Yeo, A.R. (2000). QTL: their place in engineering tolerance of rice to salinity. J Exp Bot 51, 99-106.</li>
+<li>Gimhani, D.R., Gregorio, G.B., Kottearachchi, N.S., and Samarasinghe, W.L. (2016). SNP-based discovery of salinity-tolerant QTLs in a bi-parental population of rice (Oryza sativa). Mol Genet Genomics 291, 2081-2099.</li>
+<li>Gong, J., He, P., Qian, Q., Shen, L., Zhu, L., and Chen, S. (1999). Identification of salt-tolerance QTL in rice (Oryza sativa L.). Chin Sci Bull 44, 68-71.</li>
+<li>Hossain, H., Rahman, M.A., Alam, M.S., and Singh, R.K. (2015). Mapping of Quantitative Trait Loci Associated with Reproductive-Stage Salt Tolerance in Rice. J Agron Crop Sci 201, 17-31.</li>
+<li>Islam, M.R., Salam, M.A., Hassan, L., Collard, B.C.Y., Singh, R.K., and Gregorio, G.B. (2011). QTL mapping for salinity tolerance at seedling stage in rice. Emir J Food Agric 23, 137-146.</li>
+<li>Koyama, M.L., Levesley, A., Koebner, R.M., Flowers, T.J., and Yeo, A.R. (2001). Quantitative trait loci for component physiological traits determining salt tolerance in rice. Plant Physiol 125, 406-422.</li>
+<li>Lee, S.Y., Ahn, J.H., Cha, Y.S., Yun, D.W., Lee, M.C., Ko, J.C., Lee, K.S., and Eun, M.Y. (2006). Mapping of quantitative trait loci for salt tolerance at the seedling stage in rice. Mol Cells 21, 192-196.</li>
+<li>Lin, H.X., Zhu, M.Z., Yano, M., Gao, J.P., Liang, Z.W., Su, W.A., Hu, X.H., Ren, Z.H., and Chao, D.Y. (2004). QTLs for Na+ and K+ uptake of the shoots and roots controlling rice salt tolerance. Theor Appl Genet 108, 253-260.</li>
+<li>Mohammadi, R., Mendioro, M.S., Diaz, G.Q., Gregorio, G.B., and Singh, R.K. (2013). Mapping quantitative trait loci associated with yield and yield components under reproductive stage salinity stress in rice (Oryza sativa L.). J Genet 92, 433-443.</li>
+<li>Prasad, S.R., Bagali, P.G., Shailaja, H., and Shashidhar, H.E. (2000). Molecular mapping of quantitative trait loci associated with seedling tolerance to salt stress in rice (Oryza sativa L.). Curr Sci 78, 162-164.</li>
+<li>Puram, V.R.R., Ontoy, J., Linscombe, S., and Subudhi, P.K. (2017). Genetic Dissection of Seedling Stage Salinity Tolerance in Rice Using Introgression Lines of a Salt Tolerant Landrace Nona Bokra. J Hered 108, 658-670.</li>
+<li>Sabouri, H., Rezai, A.M., Moumeni, A., Kavousi, A., Katouzi, M., and Sabouri, A. (2009). QTLs mapping of physiological traits related to salt tolerance in young rice seedlings. Biol Plant 53, 657-662.</li>
+<li>Takehisa, H., Shimodate, T., Fukuta, Y., Ueda, T., Yano, M., Yamaya, T., Kameya, T., and Sato, T. (2004). Identification of quantitative trait loci for plant growth of rice in paddy field flooded with salt water. Field Crops Res 89, 85-95.</li>
+<li>Thomson, M.J., de Ocampo, M., Egdane, J., Rahman, M.A., Sajise, A.G., Adorada, D.L., Tumimbang-Raiz, E., Blumwald, E., Seraj, Z.I., Singh, R.K., et al. (2010). Characterizing the Saltol quantitative trait locus for salinity tolerance in rice. Rice (N Y) 3, 148-160.</li>
+<li>Tian, L., Tan, L., Liu, F., Cai, H., and Sun, C. (2011). Identification of quantitative trait loci associated with salt tolerance at seedling stage from Oryza rufipogon. J Genet Genomics 38, 593-601.</li>
+<li>Tiwari, S., Sl, K., Kumar, V., Singh, B., Rao, A.R., Mithra Sv, A., Rai, V., Singh, A.K., and Singh, N.K. (2016). Mapping QTLs for Salt Tolerance in Rice (Oryza sativa L.) by Bulked Segregant Analysis of Recombinant Inbred Lines Using 50K SNP Chip. PLoS One 11, e0153610.</li>
+<li>Wang, Z., Chen, Z., Cheng, J., Lai, Y., Wang, J., Bao, Y., Huang, J., and Zhang, H. (2012a). QTL analysis of Na+ and K+ concentrations in roots and shoots under different levels of NaCl stress in rice (Oryza sativa L.). PLoS One 7, e51202.</li>
+<li>Wang, Z., Cheng, J., Chen, Z., Huang, J., Bao, Y., Wang, J., and Zhang, H. (2012b). Identification of QTLs with main, epistatic and QTL x environment interaction effects for salt tolerance in rice seedlings under different salinity conditions. Theor Appl Genet 125, 807-815.</li>
+<li>Wang, Z., Wang, J., Bao, Y., Wu, Y., and Zhang, H. (2011). Quantitative trait loci controlling rice seed germination under salt stress. Euphytica 178, 297-307.</li>
+			</ol>
+		<div class="footer">
+			<h4>&copy; 2019 zgliwen</h4>
+		</div>
+	</body>
+</html>

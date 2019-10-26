@@ -1,0 +1,330 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+		</title>
+		<!--jQuery 引入-->
+		<script src="jquery-3.4.1.min.js">
+		</script>
+		<!--DataTables 引入-->
+		<link rel="stylesheet" href="jquery.dataTables.min.css">
+		<script src="jquery.dataTables.min.js">
+		</script>
+		<!--DataTables搜索框查询结果高亮显示-->
+		<script src="jquery.highlight.js"> </script>
+		<!--DataTables搜索内容后高亮显示-->		
+		<style>
+			.highlight {
+				background-color: skyblue5
+			}
+			.header {
+				padding: 80px;
+				text-align: center;
+			}			
+			.navbar {
+				overflow: hidden;
+				background-color: #333;
+			}
+			.navbar a {
+				float: left;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 20px;
+				text-decoration: none;
+			}
+			.navbar a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			.main {
+				flex: 80%;
+				padding-bottom: 100px;
+				background-color: white;
+				padding: 20px;
+			}
+			.footer {
+				padding: 20px;
+				text-align: center;
+				background: #f1f1f1;
+			}
+			</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Gene</h1>
+		</div>
+		<div class="navbar">
+			<a href="home.html">Home</a>
+			<a href="#">Gene</a>
+			<a href="QTL_plain.html">QTL</a>
+		</div>
+		<div class="main">
+		<table id="table" class="display">
+		<thead>
+			<tr>
+				<th>Symbol</th>
+				<th>Gene description</th>
+				<th>Chromosome</th>
+				<th>RAPDB ID</th>
+				<th>MSU ID</th>
+				<th>Donor</th>
+				<th>Isolation</th>
+				<th>Effect</th>
+				<th>Reference</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+		<table>
+		<!--DataTables数据源-->
+			<script src="Gene_plain.xlsx.js"></script>
+			<!--DataTables设置-->
+			<script>
+				$(document).ready(function(){
+					var table=$('#table').DataTable({
+						data:data,
+						columns:[
+						{data:'Symbol'},
+						{data:'Gene description'},
+						{data:'Chromosome'},
+						{data:'RAPDB ID'},
+						{data:'MSU ID'},
+						{data:'Donor'},
+						{data:'Isolation'},
+						{data:'Effect'},
+						{data:'Reference'}
+						]
+					})
+				});
+			</script>
+		</div>
+		<h3>References</h3>
+			<ol>			
+<li>Agrawal, G.K., Agrawal, S.K., Shibato, J., Iwahashi, H., and Rakwal, R. (2003a). Novel rice MAP kinases OsMSRMK3 and OsWJUMK1 involved in encountering diverse environmental stresses and developmental regulation. Biochem Biophys Res Commun 300, 775-783.</li>
+<li>Agrawal, G.K., Tamogami, S., Iwahashi, H., Agrawal, V.P., and Rakwal, R. (2003b). Transient regulation of jasmonic acid-inducible rice MAP kinase gene (OsBWMK1) by diverse biotic and abiotic stresses. Plant Physiol Biochem 41, 355-361.</li>
+<li>Ahmad, I., Mian, A., and Maathuis, F.J. (2016). Overexpression of the rice AKT1 potassium channel affects potassium nutrition and rice drought tolerance. J Exp Bot 67, 2689-2698.</li>
+<li>Amir Hossain, M., Lee, Y., Cho, J.I., Ahn, C.H., Lee, S.K., Jeon, J.S., Kang, H., Lee, C.H., An, G., and Park, P.B. (2010). The bZIP transcription factor OsABF1 is an ABA responsive element binding factor that enhances abiotic stress signaling in rice. Plant Mol Biol 72, 557-566.</li>
+<li>Asano, T., Hakata, M., Nakamura, H., Aoki, N., Komatsu, S., Ichikawa, H., Hirochika, H., and Ohsugi, R. (2011). Functional characterisation of OsCPK21, a calcium-dependent protein kinase that confers salt tolerance in rice. Plant Mol Biol 75, 179-191.</li>
+<li>Asano, T., Hayashi, N., Kobayashi, M., Aoki, N., Miyao, A., Mitsuhara, I., Ichikawa, H., Komatsu, S., Hirochika, H., Kikuchi, S., et al. (2012). A rice calcium-dependent protein kinase OsCPK12 oppositely modulates salt-stress tolerance and blast disease resistance. Plant J 69, 26-36.</li>
+<li>Cai, H., Zhou, Y., Xiao, J., Li, X., Zhang, Q., and Lian, X. (2009). Overexpressed glutamine synthetase gene modifies nitrogen metabolism and abiotic stress responses in rice. Plant Cell Rep 28, 527-537.</li>
+<li>Campo, S., Baldrich, P., Messeguer, J., Lalanne, E., Coca, M., and San Segundo, B. (2014). Overexpression of a Calcium-Dependent Protein Kinase Confers Salt and Drought Tolerance in Rice by Preventing Membrane Lipid Peroxidation. Plant Physiol 165, 688-704.</li>
+<li>Cao, H., Guo, S., Xu, Y., Jiang, K., Jones, A.M., and Chong, K. (2011). Reduced expression of a gene encoding a Golgi localized monosaccharide transporter (OsGMST1) confers hypersensitivity to salt in rice (Oryza sativa). J Exp Bot 62, 4595-4604.</li>
+<li>Cao, Y., Song, F., Goodman, R.M., and Zheng, Z. (2006). Molecular characterization of four rice genes encoding ethylene-responsive transcriptional factors and their expressions in response to biotic and abiotic stress. J Plant Physiol 163, 1167-1178.</li>
+<li>Chen, G., Hu, Q., Luo, L., Yang, T., Zhang, S., Hu, Y., Yu, L., and Xu, G. (2015). Rice potassium transporter OsHAK1 is essential for maintaining potassium-mediated growth and functions in salt tolerance over low and high potassium concentration ranges. Plant Cell Environ 38, 2747-2765.</li>
+<li>Chen, L., Wang, C., Yu, G., Xu, X., and Qin, Y. (2014). Preliminary study of function of a MYB gene in rice (in Chinese). Journal of Huazhong Agricultural University 33, 7-12.</li>
+<li>Chen, L.J., Wuriyanghan, H., Zhang, Y.Q., Duan, K.X., Chen, H.W., Li, Q.T., Lu, X., He, S.J., Ma, B., Zhang, W.K., et al. (2013a). An S-domain receptor-like kinase, OsSIK2, confers abiotic stress tolerance and delays dark-induced leaf senescence in rice. Plant Physiol 163, 1752-1765.</li>
+<li>Chen, Y., Li, F., Ma, Y., Chong, K., and Xu, Y. (2013b). Overexpression of OrbHLH001, a putative helix-loop-helix transcription factor, causes increased expression of AKT1 and maintains ionic balance under salt stress in rice. J Plant Physiol 170, 93-100.</li>
+<li>Cheng, Y., Qi, Y., Zhu, Q., Chen, X., Wang, N., Zhao, X., Chen, H., Cui, X., Xu, L., and Zhang, W. (2009). New changes in the plasma-membrane-associated proteome of rice roots under salt stress. Proteomics 9, 3100-3114.</li>
+<li>Chou, W.L., Huang, L.F., Fang, J.C., Yeh, C.H., Hong, C.Y., Wu, S.J., and Lu, C.A. (2014). Divergence of the expression and subcellular localization of CCR4-associated factor 1 (CAF1) deadenylase proteins in Oryza sativa. Plant Mol Biol 85, 443-458.</li>
+<li>Diédhiou, C.J., Popova, O.V., Dietz, K.J., and Golldack, D. (2008). The SNF1-type serine-threonine protein kinase SAPK4 regulates stress-responsive gene expression in rice. BMC Plant Biol 8, 49.</li>
+<li>Du, H., Liu, L., You, L., Yang, M., He, Y., Li, X., and Xiong, L. (2011). Characterization of an inositol 1,3,4-trisphosphate 5/6-kinase gene that is essential for drought and salt stress responses in rice. Plant Mol Biol 77, 547-563.</li>
+<li>Duan, J., and Cai, W. (2012). OsLEA3-2, an abiotic stress induced gene of rice plays a key role in salt and drought tolerance. PLoS One 7, e45117.</li>
+<li>Duan, J., Zhang, M., Zhang, H., Xiong, H., Liu, P., Ali, J., Li, J., and Li, Z. (2012). OsMIOX, a myo-inositol oxygenase gene, improves drought tolerance through scavenging of reactive oxygen species in rice (Oryza sativa L.). Plant Sci 196, 143-151.</li>
+<li>Dubouzet, J.G., Sakuma, Y., Ito, Y., Kasuga, M., Dubouzet, E.G., Miura, S., Seki, M., Shinozaki, K., and Yamaguchi-Shinozaki, K. (2003). OsDREB genes in rice, Oryza sativa L., encode transcription activators that function in drought-, high-salt- and cold-responsive gene expression. Plant J 33, 751-763.</li>
+<li>Fang, H., Meng, Q., Xu, J., Tang, H., Tang, S., Zhang, H., and Huang, J. (2015a). Knock-down of stress inducible OsSRFP1 encoding an E3 ubiquitin ligase with transcriptional activation activity confers abiotic stress tolerance through enhancing antioxidant protection in rice. Plant Mol Biol 87, 441-458.</li>
+<li>Fang, Y., Liao, K., Du, H., Xu, Y., Song, H., Li, X., and Xiong, L. (2015b). A stress-responsive NAC transcription factor SNAC3 confers heat and drought tolerance through modulation of reactive oxygen species in rice. J Exp Bot 66, 6803-6817.</li>
+<li>Fang, Y., Xie, K., Hou, X., Hu, H., and Xiong, L. (2010). Systematic analysis of GT factor family of rice reveals a novel subfamily involved in stress responses. Mol Genet Genomics 283, 157-169.</li>
+<li>Feng, L., Gao, Z., Xiao, G., Huang, R., and Zhang, H. (2014). Leucine-Rich Repeat Receptor-Like Kinase FON1 Regulates Drought Stress and Seed Germination by Activating the Expression of ABA-Responsive Genes in Rice. Plant Mol Biol Rep 32, 1158-1168.</li>
+<li>Fu, S., Fu, L., Zhang, X., Huang, J., Yang, G., Wang, Z., Liu, Y.G., Zhang, G., Wu, D., and Xia, J. (2019). OsC2DP, a novel C2 domain-containing protein is required for salt tolerance in rice. Plant Cell Physiol.</li>
+<li>Fu, S.F., Chou, W.C., Huang, D.D., and Huang, H.J. (2002). Transcriptional regulation of a rice mitogen-activated protein kinase gene, OsMAPK4, in response to environmental stresses. Plant Cell Physiol 43, 958-963.</li>
+<li>Fukuda, A., Nakamura, A., Hara, N., Toki, S., and Tanaka, Y. (2011). Molecular and functional analyses of rice NHX-type Na+/H+ antiporter genes. Planta 233, 175-188.</li>
+<li>Fukuda, A., Nakamura, A., Tagiri, A., Tanaka, H., Miyao, A., Hirochika, H., and Tanaka, Y. (2004). Function, intracellular localization and the importance in salt tolerance of a vacuolar Na(+)/H(+) antiporter from rice. Plant Cell Physiol 45, 146-159.</li>
+<li>Ganguly, M., Datta, K., Roychoudhury, A., Gayen, D., Sengupta, D.N., and Datta, S.K. (2012). Overexpression of Rab16A gene in indica rice variety for generating enhanced salt tolerance. Plant Signal Behav 7, 502-509.</li>
+<li>Gao, P., Bai, X., Yang, L., Lv, D., Li, Y., Cai, H., Ji, W., Guo, D., and Zhu, Y. (2010). Over-expression of osa-MIR396c decreases salt and alkali stress tolerance. Planta 231, 991-1001.</li>
+<li>Gao, P., Bai, X., Yang, L., Lv, D., Pan, X., Li, Y., Cai, H., Ji, W., Chen, Q., and Zhu, Y. (2011a). osa-MIR393: a salinity- and alkaline stress-related microRNA gene. Mol Biol Rep 38, 237-242.</li>
+<li>Gao, Q., Zhang, D., Xu, L., and Xu, C. (2011b). Systematic Identification of Rice ABC1 Gene Family and Its Response to Abiotic Stress. Rice Sci 18.</li>
+<li>Gao, T., Wu, Y., Zhang, Y., Liu, L., Ning, Y., Wang, D., Tong, H., Chen, S., Chu, C., and Xie, Q. (2011c). OsSDIR1 overexpression greatly improves drought tolerance in transgenic rice. Plant Mol Biol 76, 145-156.</li>
+<li>García-Morales, S., Gómez-Merino, F.C., and Trejo-Téllez, L.I. (2014). NAC transcription factor expression, amino acid concentration and growth of elite rice cultivars upon salt stress. Acta Physiologiae Plantarum 36, 1927-1936.</li>
+<li>Ge, L.F., Chao, D.Y., Shi, M., Zhu, M.Z., Gao, J.P., and Lin, H.X. (2008). Overexpression of the trehalose-6-phosphate phosphatase gene OsTPP1 confers stress tolerance in rice and results in the activation of stress responsive genes. Planta 228, 191-201.</li>
+<li>Giri, J., Vij, S., Dansana, P.K., and Tyagi, A.K. (2011). Rice A20/AN1 zinc-finger containing stress-associated proteins (SAP1/11) and a receptor-like cytoplasmic kinase (OsRLCK253) interact via A20 zinc-finger and confer abiotic stress tolerance in transgenic Arabidopsis plants. New Phytol 191, 721-732.</li>
+<li>Guo, C., Ge, X., and Ma, H. (2013a). The rice OsDIL gene plays a role in drought tolerance at vegetative and reproductive stages. Plant Mol Biol 82, 239-253.</li>
+<li>Guo, C., Guo, L., Li, X., Ma, C., Duan, W., Gu, J., Xu, Z.F., Li, R., Lu, W., and Xiao, K. (2013b). Transcriptional Regulation of the Rice Phytase Gene OsPHY1 by Several Phytohormones and Osmotic Stresses Using Promoter-GUS Analysis. Plant Mol Biol Rep 31, 1461-1473.</li>
+<li>Guo, C., Luo, C., Guo, L., Li, M., Guo, X., Zhang, Y., Wang, L., and Chen, L. (2016). OsSIDP366, a DUF1644 gene, positively regulates responses to drought and salt stresses in rice. J Integr Plant Biol 58, 492-502.</li>
+<li>Guo, X., Wu, Y., Wang, Y., Chen, Y., and Chu, C. (2009). OsMSRA4.1 and OsMSRB1.1, two rice plastidial methionine sulfoxide reductases, are involved in abiotic stress responses. Planta 230, 227-238.</li>
+<li>Hashimoto, M., Kisseleva, L., Sawa, S., Furukawa, T., Komatsu, S., and Koshiba, T. (2004). A novel rice PR10 protein, RSOsPR10, specifically induced in roots by biotic and abiotic stresses, possibly via the jasmonic acid signaling pathway. Plant Cell Physiol 45, 550-559.</li>
+<li>He, Y., Yang, B., He, Y., Zhan, C., Cheng, Y., Zhang, J., Zhang, H., Cheng, J., and Wang, Z. (2019). A quantitative trait locus, qSE3, promotes seed germination and seedling establishment under salinity stress in rice. Plant J 97, 1089-1104.</li>
+<li>Hong, C.Y., Chao, Y.Y., Yang, M.Y., Cheng, S.Y., Cho, S.C., and Kao, C.H. (2009). NaCl-induced expression of glutathione reductase in roots of rice (Oryza sativa L.) seedlings is mediated through hydrogen peroxide but not abscisic acid. Plant Soil 320, 103-115.</li>
+<li>Hong, C.Y., Hsu, Y.T., Tsai, Y.C., and Kao, C.H. (2007). Expression of ASCORBATE PEROXIDASE 8 in roots of rice (Oryza sativa L.) seedlings in response to NaCl. J Exp Bot 58, 3273-3283.</li>
+<li>Horie, T., Costa, A., Kim, T.H., Han, M.J., Horie, R., Leung, H.Y., Miyao, A., Hirochika, H., An, G., and Schroeder, J.I. (2007). Rice OsHKT2;1 transporter mediates large Na+ influx component into K+-starved roots for growth. EMBO J 26, 3003-3014.</li>
+<li>Horie, T., Sugawara, M., Okada, T., Taira, K., Kaothien-Nakayama, P., Katsuhara, M., Shinmyo, A., and Nakayama, H. (2011). Rice sodium-insensitive potassium transporter, OsHAK5, confers increased salt tolerance in tobacco BY2 cells. J Biosci Bioeng 111, 346-356.</li>
+<li>Hoshida, H., Tanaka, Y., Hibino, T., Hayashi, Y., Tanaka, A., Takabe, T., and Takabe, T. (2000). Enhanced tolerance to salt stress in transgenic rice that overexpresses chloroplast glutamine synthetase. Plant Mol Biol 43, 103-111.</li>
+<li>Hossain, M.A., Cho, J.I., Han, M., Ahn, C.H., Jeon, J.S., An, G., and Park, P.B. (2010). The ABRE-binding bZIP transcription factor OsABF2 is a positive regulator of abiotic stress and ABA signaling in rice. J Plant Physiol 167, 1512-1520.</li>
+<li>Hou, X., Xie, K., Yao, J., Qi, Z., and Xiong, L. (2009). A homolog of human ski-interacting protein in rice positively regulates cell viability and stress tolerance. Proc Natl Acad Sci U S A 106, 6410-6415.</li>
+<li>Hu, H., Dai, M., Yao, J., Xiao, B., Li, X., Zhang, Q., and Xiong, L. (2006). Overexpressing a NAM, ATAF, and CUC (NAC) transcription factor enhances drought resistance and salt tolerance in rice. Proc Natl Acad Sci U S A 103, 12987-12992.</li>
+<li>Hu, H., You, J., Fang, Y., Zhu, X., Qi, Z., and Xiong, L. (2008). Characterization of transcription factor gene SNAC2 conferring cold and salt tolerance in rice. Plant Mol Biol 67, 169-181.</li>
+<li>Huang, J., Sun, S., Xu, D., Lan, H., Sun, H., Wang, Z., Bao, Y., Wang, J., Tang, H., and Zhang, H. (2012). A TFIIIA-type zinc finger protein confers multiple abiotic stress tolerances in transgenic rice (Oryza sativa L.). Plant Mol Biol 80, 337-350.</li>
+<li>Huang, J., Wang, M., Jiang, Y., Wang, Q., Huang, X., and Zhang, H. (2008a). Stress repressive expression of rice SRZ1 and characterization of plant SRZ gene family. Plant Sci 174, 227-235.</li>
+<li>Huang, J., Wang, M.M., Bao, Y.M., Sun, S.J., Pan, L.J., and Zhang, H.S. (2008b). SRWD: a novel WD40 protein subfamily regulated by salt stress in rice (OryzasativaL.). Gene 424, 71-79.</li>
+<li>Huang, J., Wang, M.M., Jiang, Y., Bao, Y.M., Huang, X., Sun, H., Xu, D.Q., Lan, H.X., and Zhang, H.S. (2008c). Expression analysis of rice A20/AN1-type zinc finger genes and characterization of ZFP177 that contributes to temperature stress tolerance. Gene 420, 135-144.</li>
+<li>Huang, J., Yang, X., Wang, M.M., Tang, H.J., Ding, L.Y., Shen, Y., and Zhang, H.S. (2007). A novel rice C2H2-type zinc finger protein lacking DLN-box/EAR-motif plays a role in salt tolerance. Biochim Biophys Acta 1769, 220-227.</li>
+<li>Huang, J., Zhang, H., Wang, J., and Yang, J. (2003). Molecular cloning and characterization of rice 6-phosphogluconate dehydrogenase gene that is up-regulated by salt stress. Mol Biol Rep 30, 223-227.</li>
+<li>Huang, L., Hong, Y., Zhang, H., Li, D., and Song, F. (2016). Rice NAC transcription factor ONAC095 plays opposite roles in drought and cold stress tolerance. BMC Plant Biol 16, 203.</li>
+<li>Huang, X.Y., Chao, D.Y., Gao, J.P., Zhu, M.Z., Shi, M., and Lin, H.X. (2009). A previously unknown zinc finger protein, DST, regulates drought and salt tolerance in rice via stomatal aperture control. Genes Dev 23, 1805-1817.</li>
+<li>Hwang, Y.S., Bethke, P.C., Cheong, Y.H., Chang, H.S., Zhu, T., and Jones, R.L. (2005). A gibberellin-regulated calcineurin B in rice localizes to the tonoplast and is implicated in vacuole function. Plant Physiol 138, 1347-1358.</li>
+<li>Igarashi, Y., Yoshiba, Y., Sanada, Y., Yamaguchi-Shinozaki, K., Wada, K., and Shinozaki, K. (1997). Characterization of the gene for delta1-pyrroline-5-carboxylate synthetase and correlation between the expression of the gene and salt tolerance in Oryza sativa L. Plant Mol Biol 33, 857-865.</li>
+<li>Ishikawa, S., Hayashi, S., Abe, T., Igura, M., Kuramata, M., Tanikawa, H., Iino, M., Saito, T., Ono, Y., Ishikawa, T., et al. (2017). Low-cesium rice: mutation in OsSOS2 reduces radiocesium in rice grains. Sci Rep 7, 2432.</li>
+<li>Ito, Y., Katsura, K., Maruyama, K., Taji, T., Kobayashi, M., Seki, M., Shinozaki, K., and Yamaguchi-Shinozaki, K. (2006). Functional analysis of rice DREB1/CBF-type transcription factors involved in cold-responsive gene expression in transgenic rice. Plant Cell Physiol 47, 141-153.</li>
+<li>Jan, A., Maruyama, K., Todaka, D., Kidokoro, S., Abo, M., Yoshimura, E., Shinozaki, K., Nakashima, K., and Yamaguchi-Shinozaki, K. (2013). OsTZF1, a CCCH-tandem zinc finger protein, confers delayed senescence and stress tolerance in rice by regulating stress-related genes. Plant Physiol 161, 1202-1216.</li>
+<li>Jeong, M.J., Lee, S.K., Kim, B.G., Kwon, T.R., Cho, W.S., Park, Y.T., Lee, J.O., Kwon, H.B., Byun, M.O., and Park, S.C. (2006). A rice (Oryza sativa L.) MAP kinase gene, OsMAPK44, is involved in response to abiotic stresses. Plant Cell Tiss Org Cult 85, 151-160.</li>
+<li>Ji, S.H., Gururani, M.A., Lee, J.W., Ahn, B.O., and Chun, S.C. (2014). Isolation and characterisation of a dwarf rice mutant exhibiting defective gibberellins biosynthesis. Plant Biol (Stuttg) 16, 428-439.</li>
+<li>Jiang, S.Y., Bhalla, R., Ramamoorthy, R., Luan, H.F., Venkatesh, P.N., Cai, M., and Ramachandran, S. (2012). Over-expression of OSRIP18 increases drought and salt tolerance in transgenic rice plants. Transgenic Res 21, 785-795.</li>
+<li>Jing, P., Zou, J., Kong, L., Hu, S., Wang, B., Yang, J., and Xie, G. (2016). OsCCD1, a novel small calcium-binding protein with one EF-hand motif, positively regulates osmotic and salt tolerance in rice. Plant Sci 247, 104-114.</li>
+<li>Jung, H., Lee, D.K., Choi, Y.D., and Kim, J.K. (2015). OsIAA6, a member of the rice Aux/IAA gene family, is involved in drought tolerance and tiller outgrowth. Plant Sci 236, 304-312.</li>
+<li>Kanneganti, V., and Gupta, A.K. (2008). Overexpression of OsiSAP8, a member of stress associated protein (SAP) gene family of rice confers tolerance to salt, drought and cold stress in transgenic tobacco and rice. Plant Mol Biol 66, 445-462.</li>
+<li>Ke, Y., Yang, Z., Yu, S., Li, T., Wu, J., Gao, H., Fu, Y.P., and Luo, L. (2014). Characterization of OsDREB6 responsive to osmotic and cold stresses in rice. J Plant Biol 57, 150-161.</li>
+<li>Kim, Y.S., and Kim, J.K. (2009). Rice transcription factor AP37 involved in grain yield increase under drought stress. Plant Signal Behav 4, 735-736.</li>
+<li>Kobayashi, Y., Yamamoto, S., Minami, H., Kagaya, Y., and Hattori, T. (2004). Differential activation of the rice sucrose nonfermenting1-related protein kinase2 family by hyperosmotic stress and abscisic acid. Plant Cell 16, 1163-1177.</li>
+<li>Koh, S., Lee, S.C., Kim, M.K., Koh, J.H., Lee, S., An, G., Choe, S., and Kim, S.R. (2007). T-DNA tagged knockout mutation of rice OsGSK1, an orthologue of Arabidopsis BIN2, with enhanced tolerance to various abiotic stresses. Plant Mol Biol 65, 453-466.</li>
+<li>Kong, X.Q., Gao, X.H., Sun, W., An, J., Zhao, Y.X., and Zhang, H. (2011). Cloning and functional characterization of a cation-chloride cotransporter gene OsCCC1. Plant Mol Biol 75, 567-578.</li>
+<li>Kothari, K.S., Dansana, P.K., Giri, J., and Tyagi, A.K. (2016). Rice Stress Associated Protein 1 (OsSAP1) Interacts with Aminotransferase (OsAMTR1) and Pathogenesis-Related 1a Protein (OsSCP) and Regulates Abiotic Stress Responses. Front Plant Sci 7, 1057.</li>
+<li>Kumar, K., Rao, K.P., Sharma, P., and Sinha, A.K. (2008). Differential regulation of rice mitogen activated protein kinase kinase (MKK) by abiotic stress. Plant Physiol Biochem 46, 891-897.</li>
+<li>Kumar, K., and Sinha, A.K. (2013). Overexpression of constitutively active mitogen activated protein kinase kinase 6 enhances tolerance to salt stress in rice. Rice (N Y) 6, 25.</li>
+<li>Kumar, R., Mustafiz, A., Sahoo, K.K., Sharma, V., Samanta, S., Sopory, S.K., Pareek, A., and Singla-Pareek, S.L. (2012). Functional screening of cDNA library from a salt tolerant rice genotype Pokkali identifies mannose-1-phosphate guanyl transferase gene (OsMPG1) as a key member of salinity stress response. Plant Mol Biol 79, 555-568.</li>
+<li>Kumari, S., Joshi, R., Singh, K., Roy, S., Tripathi, A.K., Singh, P., Singla-Pareek, S.L., and Pareek, A. (2015). Expression of a cyclophilin OsCyp2-P isolated from a salt-tolerant landrace of rice in tobacco alleviates stress via ion homeostasis and limiting ROS accumulation. Funct Integr Genomics 15, 395-412.</li>
+<li>Lakra, N., Nutan, K.K., Das, P., Anwar, K., Singla-Pareek, S.L., and Pareek, A. (2015). A nuclear-localized histone-gene binding protein from rice (OsHBP1b) functions in salinity and drought stress tolerance by maintaining chlorophyll content and improving the antioxidant machinery. J Plant Physiol 176, 36-46.</li>
+<li>Lee, D.K., Kim, H.I., Jang, G., Chung, P.J., Jeong, J.S., Kim, Y.S., Bang, S.W., Jung, H., Choi, Y.D., and Kim, J.K. (2015). The NF-YA transcription factor OsNF-YA7 confers drought stress tolerance of rice in an abscisic acid independent manner. Plant Sci 241, 199-210.</li>
+<li>Lee, S.-C., Kim, J.-Y., Kim, S.-H., Kim, S.-J., Lee, K., Han, S.-K., Choi, H.-S., Jeong, D.-H., An, G., and Kim, S.-R. (2004). Trapping and characterization of cold-responsive genes from T-DNA tagging lines in rice. Plant Sci 166, 69-79.</li>
+<li>Lee, S.K., Kim, B.G., Kwon, T.R., Jeong, M.J., Park, S.R., Lee, J.W., Byun, M.O., Kwon, H.B., Matthews, B.F., Hong, C.B., et al. (2011). Overexpression of the mitogen-activated protein kinase gene OsMAPK33 enhances sensitivity to salt stress in rice (Oryza sativa L.). J Biosci 36, 139-151.</li>
+<li>Li, C.H., Wang, G., Zhao, J.L., Zhang, L.Q., Ai, L.F., Han, Y.F., Sun, D.Y., Zhang, S.W., and Sun, Y. (2014). The Receptor-Like Kinase SIT1 Mediates Salt Sensitivity by Activating MAPK3/6 and Regulating Ethylene Homeostasis in Rice. Plant Cell 26, 2538-2553.</li>
+<li>Li, H.W., Zang, B.S., Deng, X.W., and Wang, X.P. (2011). Overexpression of the trehalose-6-phosphate synthase gene OsTPS1 enhances abiotic stress tolerance in rice. Planta 234, 1007-1018.</li>
+<li>Li, J., Han, Y., Liu, L., Chen, Y., Du, Y., Zhang, J., Sun, H., and Zhao, Q. (2015). qRT9, a quantitative trait locus controlling root thickness and root length in upland rice. J Exp Bot 66, 2723-2732.</li>
+<li>Li, X., Han, H., Chen, M., Yang, W., Liu, L., Li, N., Ding, X., and Chu, Z. (2017). Overexpression of OsDT11, which encodes a novel cysteine-rich peptide, enhances drought tolerance and increases ABA concentration in rice. Plant Mol Biol 93, 21-34.</li>
+<li>Li, X., Zhang, X., Takano, T., and Liu, S. (2012). Expression characteristics of rice (Oryza sativa L.) malic enzyme (OsNADP-ME3) gene under environmental stress (in Chinese). Genomics and Applied Biology 31, 327-332.</li>
+<li>Liang, W., Bi, J., Peng, W., Zhang, F., Shi, H., and Li, L. (2010). Cloning and Expression Analysis of a Mitogen-Activated Protein Kinase Gene OsMPK14 in Rice. Rice Sci 17.</li>
+<li>Lim, S.D., Jung, C.G., Park, Y.C., Lee, S.C., Lee, C., Lim, C.W., Kim, D.S., and Jang, C.S. (2015). Molecular dissection of a rice microtubule-associated RING finger protein and its potential role in salt tolerance in Arabidopsis. Plant Mol Biol 89, 365-384.</li>
+<li>Liu, A.L., Zou, J., Liu, C.F., Zhou, X.Y., Zhang, X.W., Luo, G.Y., and Chen, X.B. (2013). Over-expression of OsHsfA7 enhanced salt and drought tolerance in transgenic rice. BMB Rep 46, 31-36.</li>
+<li>Liu, C., Mao, B., Ou, S., Wang, W., Liu, L., Wu, Y., Chu, C., and Wang, X. (2014). OsbZIP71, a bZIP transcription factor, confers salinity and drought tolerance in rice. Plant Mol Biol 84, 19-36.</li>
+<li>Liu, D., Chen, X., Liu, J., Ye, J., and Guo, Z. (2012). The rice ERF transcription factor OsERF922 negatively regulates resistance to Magnaporthe oryzae and salt tolerance. J Exp Bot 63, 3899-3911.</li>
+<li>Liu, J., Liang, D., Song, Y., and Xiong, L. (2010a). Systematic identification and expression analysis of BREVIS RADIX-like homologous genes in rice. Plant Sci 178, 183-191.</li>
+<li>Liu, K., Wang, L., Xu, Y., Chen, N., Ma, Q., Li, F., and Chong, K. (2007a). Overexpression of OsCOIN, a putative cold inducible zinc finger protein, increased tolerance to chilling, salt and drought, and enhanced proline level in rice. Planta 226, 1007-1016.</li>
+<li>Liu, S., Cheng, Y., Zhang, X., Guan, Q., Nishiuchi, S., Hase, K., and Takano, T. (2007b). Expression of an NADP-malic enzyme gene in rice (Oryza sativa. L) is induced by environmental stresses; over-expression of the gene in Arabidopsis confers salt and osmotic stress tolerance. Plant Mol Biol 64, 49-58.</li>
+<li>Liu, S., Zheng, L., Xue, Y., Zhang, Q., Wang, L., and Shou, H. (2010b). Overexpression of OsVP1 and OsNHX1 Increases Tolerance to Drought and Salinity in Rice. J Plant Biol 53, 444-452.</li>
+<li>Liu, W.Y., Wang, M.M., Huang, J., Tang, H.J., Lan, H.X., and Zhang, H.S. (2009). The OsDHODH1 gene is involved in salt and drought tolerance in rice. J Integr Plant Biol 51, 825-833.</li>
+<li>Lu, Z., Liu, D., and Liu, S. (2007). Two rice cytosolic ascorbate peroxidases differentially improve salt tolerance in transgenic Arabidopsis. Plant Cell Rep 26, 1909-1917.</li>
+<li>Luo, C., Guo, C., Zhang, Y., Chen, J., Xiao, S., and Chen, L. (2013). Expression analysis of a stress repressed gene OsDSR4 from DUF966 family and generation of OsDSR4-overexpression transgenic rice (Oryza sativa L. ssp. Japonica) (in Chinese). Journal of Agricultural Biotechnology 21, 1287-1294.</li>
+<li>Luo, M., Gu, S.H., Zhao, S.H., Zhang, F., and Wu, N.H. (2006). Rice GTPase OsRacB: potential accessory factor in plant salt-stress signaling. Acta Biochim Biophys Sin (Shanghai) 38, 393-402.</li>
+<li>Mallikarjuna, G., Mallikarjuna, K., Reddy, M.K., and Kaul, T. (2011). Expression of OsDREB2A transcription factor confers enhanced dehydration and salt stress tolerance in rice (Oryza sativa L.). Biotechnol Lett 33, 1689-1697.</li>
+<li>Martinez-Atienza, J., Jiang, X., Garciadeblas, B., Mendoza, I., Zhu, J.K., Pardo, J.M., and Quintero, F.J. (2007). Conservation of the salt overly sensitive pathway in rice. Plant Physiol 143, 1001-1012.</li>
+<li>Matsuda, S., Nagasawa, H., Yamashiro, N., Yasuno, N., Watanabe, T., Kitazawa, H., Takano, S., Tokuji, Y., Tani, M., Takamure, I., et al. (2014). Rice RCN1/OsABCG5 mutation alters accumulation of essential and nonessential minerals and causes a high Na/K ratio, resulting in a salt-sensitive phenotype. Plant Sci 224, 103-111.</li>
+<li>Mukherjee, K., Choudhury, A.R., Gupta, B., Gupta, S., and Sengupta, D.N. (2006). An ABRE-binding factor, OSBZ8, is highly expressed in salt tolerant cultivars than in salt sensitive cultivars of indica rice. BMC Plant Biol 6, 18.</li>
+<li>Mukhopadhyay, A., Vij, S., and Tyagi, A.K. (2004). Overexpression of a zinc-finger protein gene from rice confers tolerance to cold, dehydration, and salt stress in transgenic tobacco. Proc Natl Acad Sci U S A 101, 6309-6314.</li>
+<li>Mustafiz, A., Ghosh, A., Tripathi, A.K., Kaur, C., Ganguly, A.K., Bhavesh, N.S., Tripathi, J.K., Pareek, A., Sopory, S.K., and Singla-Pareek, S.L. (2014). A unique Ni2+ -dependent and methylglyoxal-inducible rice glyoxalase I possesses a single active site and functions in abiotic stress response. Plant J 78, 951-963.</li>
+<li>Nakashima, K., Tran, L.S., Van Nguyen, D., Fujita, M., Maruyama, K., Todaka, D., Ito, Y., Hayashi, N., Shinozaki, K., and Yamaguchi-Shinozaki, K. (2007). Functional analysis of a NAC-type transcription factor OsNAC6 involved in abiotic and biotic stress-responsive gene expression in rice. Plant J 51, 617-630.</li>
+<li>Ning, J., Li, X., Hicks, L.M., and Xiong, L. (2010). A Raf-like MAPKKK gene DSM1 mediates drought resistance through reactive oxygen species scavenging in rice. Plant Physiol 152, 876-890.</li>
+<li>Obata, T., Kitamoto, H.K., Nakamura, A., Fukuda, A., and Tanaka, Y. (2007). Rice shaker potassium channel OsKAT1 confers tolerance to salinity stress on yeast and rice cells. Plant Physiol 144, 1978-1985.</li>
+<li>Ogawa, D., Abe, K., Miyao, A., Kojima, M., Sakakibara, H., Mizutani, M., Morita, H., Toda, Y., Hobo, T., Sato, Y., et al. (2011). RSS1 regulates the cell cycle and maintains meristematic activity under stress conditions in rice. Nat Commun 2, 278.</li>
+<li>Oh, S.J., Kim, Y.S., Kwon, C.W., Park, H.K., Jeong, J.S., and Kim, J.K. (2009). Overexpression of the transcription factor AP37 in rice improves grain yield under drought conditions. Plant Physiol 150, 1368-1379.</li>
+<li>Ohnishi, T., Sugahara, S., Yamada, T., Kikuchi, K., Yoshiba, Y., Hirano, H.Y., and Tsutsumi, N. (2005). OsNAC6, a member of the NAC gene family, is induced by various stresses in rice. Genes Genet Syst 80, 135-139.</li>
+<li>Ouyang, J., Cai, Z., Xia, K., Wang, Y., Duan, J., and Zhang, M. (2010a). Identification and analysis of eight peptide transporter homologs in rice. Plant Sci 179, 374-382.</li>
+<li>Ouyang, S.Q., Liu, Y.F., Liu, P., Lei, G., He, S.J., Ma, B., Zhang, W.K., Zhang, J.S., and Chen, S.Y. (2010b). Receptor-like kinase OsSIK1 improves drought and salt stress tolerance in rice (Oryza sativa) plants. Plant J 62, 316-329.</li>
+<li>Park, G.G., Park, J.J., Yoon, J., Yu, S.N., and An, G. (2010a). A RING finger E3 ligase gene, Oryza sativa Delayed Seed Germination 1 (OsDSG1), controls seed germination and stress responses in rice. Plant Mol Biol 74, 467-478.</li>
+<li>Park, H.C., Kim, H., Koo, S.C., Park, H.J., Cheong, M.S., Hong, H., Baek, D., Chung, W.S., Kim, D.H., Bressan, R.A., et al. (2010b). Functional characterization of the SIZ/PIAS-type SUMO E3 ligases, OsSIZ1 and OsSIZ2 in rice. Plant Cell Environ 33, 1923-1934.</li>
+<li>Park, H.Y., Kang, I.S., Han, J.S., Lee, C.H., An, G., and Moon, Y.H. (2009). OsDEG10 encoding a small RNA-binding protein is involved in abiotic stress signaling. Biochem Biophys Res Commun 380, 597-602.</li>
+<li>Park, J.J., Yi, J., Yoon, J., Cho, L.H., Ping, J., Jeong, H.J., Cho, S.K., Kim, W.T., and An, G. (2011). OsPUB15, an E3 ubiquitin ligase, functions to reduce cellular oxidative stress during seedling establishment. Plant J 65, 194-205.</li>
+<li>Paul, P., Awasthi, A., Rai, A.K., Gupta, S.K., Prasad, R., Sharma, T.R., and Dhaliwal, H.S. (2012). Reduced tillering in Basmati rice T-DNA insertional mutant OsTEF1 associates with differential expression of stress related genes and transcription factors. Funct Integr Genomics 12, 291-304.</li>
+<li>Phean-o-pas, S., Punteeranurak, P., and Buaboocha, T. (2005). Calcium signaling-mediated and differential induction of calmodulin gene expression by stress in Oryza sativa L. J Biochem Mol Biol 38, 432-439.</li>
+<li>Piao, H.L., Xuan, Y.H., Park, S.H., Je, B.I., Park, S.J., Park, S.H., Kim, C.M., Huang, J., Wang, G.K., Kim, M.J., et al. (2010). OsCIPK31, a CBL-interacting protein kinase is involved in germination and seedling growth under abiotic stress conditions in rice plants. Mol Cells 30, 19-27.</li>
+<li>Qi, W., Sun, F., Wang, Q., Chen, M., Huang, Y., Feng, Y.Q., Luo, X., and Yang, J. (2011). Rice ethylene-response AP2/ERF factor OsEATB restricts internode elongation by down-regulating a gibberellin biosynthetic gene. Plant Physiol 157, 216-228.</li>
+<li>Qi, Z., and Xiong, L. (2013). Characterization of a purine permease family gene OsPUP7 involved in growth and development control in rice. J Integr Plant Biol 55, 1119-1135.</li>
+<li>Qin, Y., Shen, X., Wang, N., and Ding, X. (2015). Characterization of a novel cyclase-like gene family involved in controlling stress tolerance in rice. J Plant Physiol 181, 30-41.</li>
+<li>Qiu, S., Ma, N., Che, S., Wang, Y., Peng, X., Zhang, G., Wang, G., and Huang, J. (2014). Repression of OsEXPA3 Expression Leads to Root System Growth Suppression in Rice. Crop Sci 54, 2201-2213.</li>
+<li>Qiu, S., Zhou, G., Lu, J., Huang, J., Pan, L.J., Wang, J., Yang, Q., and Zhang, H. (2006). Molecular cloning and expression analysis of a new vacuolar Na+/H+ antiporter gene in rice (Oryza sativa) (in Chinese). Chinese J Rice Sci 20, 119-124.</li>
+<li>Rabbani, M.A., Maruyama, K., Abe, H., Khan, M.A., Katsura, K., Ito, Y., Yoshiwara, K., Seki, M., Shinozaki, K., and Yamaguchi-Shinozaki, K. (2003). Monitoring expression profiles of rice genes under cold, drought, and high-salinity stresses and abscisic acid application using cDNA microarray and RNA gel-blot analyses. Plant Physiol 133, 1755-1767.</li>
+<li>Ren, Z.H., Gao, J.P., Li, L.G., Cai, X.L., Huang, W., Chao, D.Y., Zhu, M.Z., Wang, Z.Y., Luan, S., and Lin, H.X. (2005). A rice quantitative trait locus for salt tolerance encodes a sodium transporter. Nat Genet 37, 1141-1146.</li>
+<li>Ruan, S.L., Ma, H.S., Wang, S.H., Fu, Y.P., Xin, Y., Liu, W.Z., Wang, F., Tong, J.X., Wang, S.Z., and Chen, H.Z. (2011). Proteomic identification of OsCYP2, a rice cyclophilin that confers salt tolerance in rice (Oryza sativa L.) seedlings when overexpressed. BMC Plant Biol 11, 34.</li>
+<li>Saeng-ngam, S., Takpirom, W., Buaboocha, T., and Chadchawan, S. (2012). The role of the OsCam1-1 salt stress sensor in ABA accumulation and salt tolerance in rice. J Plant Biol 55, 198-208.</li>
+<li>Sahi, C., Agarwal, M., Singh, A., and Grover, A. (2007). Molecular characterization of a novel isoform of rice (Oryza sativa L.) glycine rich-RNA binding protein and evidence for its involvement in high temperature stress response. Plant Sci 173, 144-155.</li>
+<li>Saijo, Y., Hata, S., Kyozuka, J., Shimamoto, K., and Izui, K. (2000). Over-expression of a single Ca2+-dependent protein kinase confers both cold and salt/drought tolerance on rice plants. Plant J 23, 319-327.</li>
+<li>Sakuraba, Y., Piao, W., Lim, J.H., Han, S.H., Kim, Y.S., An, G., and Paek, N.C. (2015). Rice ONAC106 Inhibits Leaf Senescence and Increases Salt Tolerance and Tiller Angle. Plant Cell Physiol 56, 2325-2339.</li>
+<li>Schmidt, R., Caldana, C., Mueller-Roeber, B., and Schippers, J.H. (2014). The contribution of SERF1 to root-to-shoot signaling during salinity stress in rice. Plant Signal Behav 9, e27540.</li>
+<li>Schmidt, R., Mieulet, D., Hubberten, H.M., Obata, T., Hoefgen, R., Fernie, A.R., Fisahn, J., San Segundo, B., Guiderdoni, E., Schippers, J.H., et al. (2013). Salt-responsive ERF1 regulates reactive oxygen species-dependent signaling during the initial response to salt stress in rice. Plant Cell 25, 2115-2131.</li>
+<li>Schmidt, R., Schippers, J.H., Welker, A., Mieulet, D., Guiderdoni, E., and Mueller-Roeber, B. (2012). Transcription factor OsHsfC1b regulates salt tolerance and development in Oryza sativa ssp. japonica. AoB Plants 2012, pls011.</li>
+<li>Seo, J.S., Joo, J., Kim, M.J., Kim, Y.K., Nahm, B.H., Song, S.I., Cheong, J.J., Lee, J.S., Kim, J.K., and Choi, Y.D. (2011). OsbHLH148, a basic helix-loop-helix protein, interacts with OsJAZ proteins in a jasmonate signaling pathway leading to drought tolerance in rice. Plant J 65, 907-921.</li>
+<li>Serra, T.S., Figueiredo, D.D., Cordeiro, A.M., Almeida, D.M., Lourenco, T., Abreu, I.A., Sebastian, A., Fernandes, L., Contreras-Moreira, B., Oliveira, M.M., et al. (2013). OsRMC, a negative regulator of salt stress response in rice, is regulated by two AP2/ERF transcription factors. Plant Mol Biol 82, 439-455.</li>
+<li>Shan, C., Mei, Z., Duan, J., Chen, H., Feng, H., and Cai, W. (2014). OsGA2ox5, a gibberellin metabolism enzyme, is involved in plant growth, the root gravity response and salt stress. PLoS One 9, e87110.</li>
+<li>Sharma, R., Priya, P., and Jain, M. (2013). Modified expression of an auxin-responsive rice CC-type glutaredoxin gene affects multiple abiotic stress responses. Planta 238, 871-884.</li>
+<li>Sharma, S., Kaur, C., Singla-Pareek, S.L., and Sopory, S.K. (2016). OsSRO1a Interacts with RNA Binding Domain-Containing Protein (OsRBD1) and Functions in Abiotic Stress Tolerance in Yeast. Front Plant Sci 7, 62.</li>
+<li>Shen, J., Lv, B., Luo, L., He, J., Mao, C., Xi, D., and Ming, F. (2017). The NAC-type transcription factor OsNAC2 regulates ABA-dependent genes and abiotic stress tolerance in rice. Sci Rep 7, 40641.</li>
+<li>Shen, P., Wang, R., Jing, W., and Zhang, W. (2011). Rice phospholipase Dalpha is involved in salt tolerance by the mediation of H(+)-ATPase activity and transcription. J Integr Plant Biol 53, 289-299.</li>
+<li>Shen, Y., Shen, L., Shen, Z., Jing, W., Ge, H., Zhao, J., and Zhang, W. (2015). The potassium transporter OsHAK21 functions in the maintenance of ion homeostasis and tolerance to salt stress in rice. Plant Cell Environ 38, 2766-2779.</li>
+<li>Sheng, P., Tan, J., Jin, M., Wu, F., Zhou, K., Ma, W., Heng, Y., Wang, J., Guo, X., Zhang, X., et al. (2014). Albino midrib 1, encoding a putative potassium efflux antiporter, affects chloroplast development and drought tolerance in rice. Plant Cell Rep 33, 1581-1594.</li>
+<li>Shin, J.H., Yoshimoto, K., Ohsumi, Y., Jeon, J.S., and An, G. (2009). OsATG10b, an autophagosome component, is needed for cell survival against oxidative stresses in rice. Mol Cells 27, 67-74.</li>
+<li>Siahpoosh, M.R., Sanchez, D.H., Schlereth, A., Scofield, G.N., Furbank, R.T., van Dongen, J.T., and Kopka, J. (2012). Modification of OsSUT1 gene expression modulates the salt response of rice Oryza sativa cv. Taipei 309. Plant Sci 182, 101-111.</li>
+<li>Singh, A., Sahi, C., and Grover, A. (2009). Chymotrypsin protease inhibitor gene family in rice: Genomic organization and evidence for the presence of a bidirectional promoter shared between two chymotrypsin protease inhibitor genes. Gene 428, 9-19.</li>
+<li>Sripinyowanich, S., Klomsakul, P., Boonburapong, B., Bangyeekhun, T., Asami, T., Gu, H., Buaboocha, T., and Chadchawan, S. (2013). Exogenous ABA induces salt tolerance in indica rice (Oryza sativa L.): The role of OsP5CS1 and OsP5CR gene expression during salt stress. Environ Exp Bot 86, 94-105.</li>
+<li>Sun, L., Zhang, Q., Wu, J., Zhang, L., Jiao, X., Zhang, S., Zhang, Z., Sun, D., Lu, T., and Sun, Y. (2014). Two rice authentic histidine phosphotransfer proteins, OsAHP1 and OsAHP2, mediate cytokinin signaling and stress responses in rice. Plant Physiol 165, 335-345.</li>
+<li>Sun, S.J., Guo, S.Q., Yang, X., Bao, Y.M., Tang, H.J., Sun, H., Huang, J., and Zhang, H.S. (2010). Functional analysis of a novel Cys2/His2-type zinc finger protein involved in salt tolerance in rice. J Exp Bot 61, 2807-2818.</li>
+<li>Takagi, H., Tamiru, M., Abe, A., Yoshida, K., Uemura, A., Yaegashi, H., Obara, T., Oikawa, K., Utsushi, H., Kanzaki, E., et al. (2015). MutMap accelerates breeding of a salt-tolerant rice cultivar. Nat Biotechnol 33, 445-449.</li>
+<li>Takasaki, H., Maruyama, K., Kidokoro, S., Ito, Y., Fujita, Y., Shinozaki, K., Yamaguchi-Shinozaki, K., and Nakashima, K. (2010). The abiotic stress-responsive NAC-type transcription factor OsNAC5 regulates stress-inducible genes and stress tolerance in rice. Mol Genet Genomics 284, 173-183.</li>
+<li>Takeuchi, K., Gyohda, A., Tominaga, M., Kawakatsu, M., Hatakeyama, A., Ishii, N., Shimaya, K., Nishimura, T., Riemann, M., Nick, P., et al. (2011). RSOsPR10 expression in response to environmental stresses is regulated antagonistically by jasmonate/ethylene and salicylic acid signaling pathways in rice roots. Plant Cell Physiol 52, 1686-1696.</li>
+<li>Tang, W., Sun, J., Liu, J., Liu, F., Yan, J., Gou, X., Lu, B.R., and Liu, Y. (2014). RNAi-directed downregulation of betaine aldehyde dehydrogenase 1 (OsBADH1) results in decreased stress tolerance and increased oxidative markers without affecting glycine betaine biosynthesis in rice (Oryza sativa). Plant Mol Biol 86, 443-454.</li>
+<li>Tao, Z., Kou, Y., Liu, H., Li, X., Xiao, J., and Wang, S. (2011). OsWRKY45 alleles play different roles in abscisic acid signalling and salt stress tolerance but similar roles in drought and cold tolerance in rice. J Exp Bot 62, 4863-4874.</li>
+<li>Tao, Z., Liu, H., Qiu, D., Zhou, Y., Li, X., Xu, C., and Wang, S. (2009). A pair of allelic WRKY genes play opposite roles in rice-bacteria interactions. Plant Physiol 151, 936-948.</li>
+<li>Toda, Y., Tanaka, M., Ogawa, D., Kurata, K., Kurotani, K., Habu, Y., Ando, T., Sugimoto, K., Mitsuda, N., Katoh, E., et al. (2013). RICE SALT SENSITIVE3 forms a ternary complex with JAZ and class-C bHLH factors and regulates jasmonate-induced gene expression and root cell elongation. Plant Cell 25, 1709-1725.</li>
+<li>Tuteja, N., Sahoo, R.K., Garg, B., and Tuteja, R. (2013). OsSUV3 dual helicase functions in salinity stress tolerance by maintaining photosynthesis and antioxidant machinery in rice (Oryza sativa L. cv. IR64). Plant J 76, 115-127.</li>
+<li>Uchimiya, H., Fujii, S., Huang, J., Fushimi, T., Nishioka, M., Kim, K.-M., Yamada, M.K., Kurusu, T., Kuchitsu, K., and Tagawa, M. (2002). Transgenic rice plants conferring increased tolerance to rice blast and multiple environmental stresses. Mol Breed 9, 25-31.</li>
+<li>Wang, F., Jing, W., and Zhang, W. (2014a). The mitogen-activated protein kinase cascade MKK1-MPK4 mediates salt signaling in rice. Plant Sci 227, 181-189.</li>
+<li>Wang, H., Bian, M., Yang, Z., Lin, C., and Shi, W. (2012a). Preliminary Functional Analysis of the Isoforms of OsHsfA2a (Oryza sativa L.) Generated by Alternative Splicing. Plant Mol Biol Rep 31, 38-46.</li>
+<li>Wang, H., Zhang, M., Guo, R., Shi, D., Liu, B., Lin, X., and Yang, C. (2012b). Effects of salt stress on ion balance and nitrogen metabolism of old and young leaves in rice (Oryza sativa L.). BMC Plant Biol 12, 194.</li>
+<li>Wang, L., Ma, F., Xu, S., Zheng, T., Wang, R., Chen, H., and Shen, W. (2013). Cloning and characterization of a heme oxygenase-2 gene from rice (Oryza sativa L.), and its expression analysis in response to some abiotic stresses. Acta Physiologiae Plantarum 36, 893-902.</li>
+<li>Wang, L., Yu, C., Chen, C., He, C., Zhu, Y., and Huang, W. (2014b). Identification of rice Di19 family reveals OsDi19-4 involved in drought resistance. Plant Cell Rep 33, 2047-2062.</li>
+<li>Wang, N., Zhang, D., Wang, Z., Xun, H., Ma, J., Wang, H., Huang, W., Liu, Y., Lin, X., Li, N., et al. (2014c). Mutation of the RDR1 gene caused genome-wide changes in gene expression, regional variation in small RNA clusters and localized alteration in DNA methylation in rice. BMC Plant Biol 14, 177.</li>
+<li>Wang, Q., Guan, Y., Wu, Y., Chen, H., Chen, F., and Chu, C. (2008). Overexpression of a rice OsDREB1F gene increases salt, drought, and low temperature tolerance in both Arabidopsis and rice. Plant Mol Biol 67, 589-602.</li>
+<li>Wang, R., Jing, W., Xiao, L., Jin, Y., Shen, L., and Zhang, W. (2015). The Rice High-Affinity Potassium Transporter1;1 Is Involved in Salt Tolerance and Regulated by an MYB-Type Transcription Factor. Plant Physiol 168, 1076-1090.</li>
+<li>Wang, X., Chen, J., Yang, Y., Zhou, J., Qiu, Y., Yu, C., Cheng, Y., Yan, C., and Chen, J. (2012c). Characterization of a Novel NBS-LRR Gene Involved in Bacterial Blight Resistance in Rice. Plant Mol Biol Rep 31, 649-656.</li>
+<li>Wei, Y., Xu, H., Diao, L., Zhu, Y., Xie, H., Cai, Q., Wu, F., Wang, Z., Zhang, J., and Xie, H. (2015). Protein repair L-isoaspartyl methyltransferase 1 (PIMT1) in rice improves seed longevity by preserving embryo vigor and viability. Plant Mol Biol 89, 475-492.</li>
+<li>Wu, T.M., Lin, W.R., Kao, C.H., and Hong, C.Y. (2015). Gene knockout of glutathione reductase 3 results in increased sensitivity to salt stress in rice. Plant Mol Biol 87, 555-564.</li>
+<li>Wu, T.M., Lin, W.R., Kao, Y.T., Hsu, Y.T., Yeh, C.H., Hong, C.Y., and Kao, C.H. (2013). Identification and characterization of a novel chloroplast/mitochondria co-localized glutathione reductase 3 involved in salt stress response in rice. Plant Mol Biol 83, 379-390.</li>
+<li>Xia, K., Ou, X., Tang, H., Wang, R., Wu, P., Jia, Y., Wei, X., Xu, X., Kang, S.H., Kim, S.K., et al. (2015). Rice microRNA osa-miR1848 targets the obtusifoliol 14alpha-demethylase gene OsCYP51G3 and mediates the biosynthesis of phytosterols and brassinosteroids during development and in response to stress. New Phytol 208, 790-802.</li>
+<li>Xia, K., Wang, R., Ou, X., Fang, Z., Tian, C., Duan, J., Wang, Y., and Zhang, M. (2012). OsTIR1 and OsAFB2 downregulation via OsmiR393 overexpression leads to more tillers, early flowering and less tolerance to salt and drought in rice. PLoS One 7, e30039.</li>
+<li>Xiang, J., Ran, J., Zou, J., Zhou, X., Liu, A., Zhang, X., Peng, Y., Tang, N., Luo, G., and Chen, X. (2013). Heat shock factor OsHsfB2b negatively regulates drought and salt tolerance in rice. Plant Cell Rep 32, 1795-1806.</li>
+<li>Xiang, Y., Huang, Y., and Xiong, L. (2007). Characterization of stress-responsive CIPK genes in rice for stress tolerance improvement. Plant Physiol 144, 1416-1428.</li>
+<li>Xiang, Y., Tang, N., Du, H., Ye, H., and Xiong, L. (2008). Characterization of OsbZIP23 as a key player of the basic leucine zipper transcription factor family for conferring abscisic acid sensitivity and salinity and drought tolerance in rice. Plant Physiol 148, 1938-1952.</li>
+<li>Xiao, B., Huang, Y., Tang, N., and Xiong, L. (2007). Over-expression of a LEA gene in rice improves drought resistance under the field conditions. Theor Appl Genet 115, 35-46.</li>
+<li>Xiao, J., Cheng, H., Li, X., Xiao, J., Xu, C., and Wang, S. (2013). Rice WRKY13 regulates cross talk between abiotic and biotic stress signaling pathways by selective binding to different cis-elements. Plant Physiol 163, 1868-1882.</li>
+<li>Xiong, L., and Yang, Y. (2003). Disease resistance and abiotic stress tolerance in rice are inversely modulated by an abscisic acid-inducible mitogen-activated protein kinase. Plant Cell 15, 745-759.</li>
+<li>Xu, D.Q., Huang, J., Guo, S.Q., Yang, X., Bao, Y.M., Tang, H.J., and Zhang, H.S. (2008). Overexpression of a TFIIIA-type zinc finger protein gene ZFP252 enhances drought and salt tolerance in rice (Oryza sativa L.). FEBS Lett 582, 1037-1043.</li>
+<li>Xu, G., Cui, Y., Wang, M., Lim, M., Yin, X., and Xia, X. (2014). OsMsr9, a novel putative rice F-box containing protein, confers enhanced salt tolerance in transgenic rice and Arabidopsis. Mol Breeding 34, 1055-1064.</li>
+<li>Xu, K., Chen, S., Li, T., Ma, X., Liang, X., Ding, X., Liu, H., and Luo, L. (2015). OsGRAS23, a rice GRAS transcription factor gene, is involved in drought stress response through regulating expression of stress-responsive genes. BMC Plant Biol 15, 141.</li>
+<li>Yadav, A.K., Shankar, A., Jha, S.K., Kanwar, P., Pandey, A., and Pandey, G.K. (2015). A rice tonoplastic calcium exchanger, OsCCX2 mediates Ca2+/cation transport in yeast. Sci Rep 5, 17117.</li>
+<li>Yadav, D.K., and Tuteja, N. (2011). Rice G-protein coupled receptor (GPCR): in silico analysis and transcription regulation under abiotic stress. Plant Signal Behav 6, 1079-1086.</li>
+<li>Yamada, N., Theerawitaya, C., Cha-um, S., Kirdmanee, C., and Takabe, T. (2014). Expression and functional analysis of putative vacuolar Ca2+-transporters (CAXs and ACAs) in roots of salt tolerant and sensitive rice cultivars. Protoplasma 251, 1067-1075.</li>
+<li>Yang, A., Dai, X., and Zhang, W.H. (2012). A R2R3-type MYB gene, OsMYB2, is involved in salt, cold, and dehydration tolerance in rice. J Exp Bot 63, 2541-2556.</li>
+<li>Yang, M., Sun, F., Wang, S., Qi, W., Wang, Q., Dong, X., Yang, J., and Luo, X. (2013). Down-regulation of OsPDCD5 a homolog of the mammalian PDCD increases rice tolerance to salt stress. Mol Breeding 31, 333-346.</li>
+<li>Yang, T., Zhang, S., Hu, Y., Wu, F., Hu, Q., Chen, G., Cai, J., Wu, T., Moran, N., Yu, L., et al. (2014). The role of a potassium transporter OsHAK5 in potassium acquisition and transport from roots to shoots in rice at low potassium supply levels. Plant Physiol 166, 945-959.</li>
+<li>Yang, W., Kong, Z., Omo-Ikerodah, E., Xu, W., Li, Q., and Xue, Y. (2008). Calcineurin B-like interacting protein kinase OsCIPK23 functions in pollination and drought stress responses in rice (Oryza sativa L.). J Genet Genomics 35, 531-543, s531-532.</li>
+<li>Yang, X., Yang, Y.N., Xue, L.J., Zou, M.J., Liu, J.Y., Chen, F., and Xue, H.W. (2011). Rice ABI5-Like1 regulates abscisic acid and auxin responses by affecting the expression of ABRE-containing genes. Plant Physiol 156, 1397-1409.</li>
+<li>Ye, H., Du, H., Tang, N., Li, X., and Xiong, L. (2009). Identification and expression profiling analysis of TIFY family genes involved in stress and phytohormone responses in rice. Plant Mol Biol 71, 291-305.</li>
+<li>Ye, W., Hu, S., Wu, L., Ge, C., Cui, Y., Chen, P., Wang, X., Xu, J., Ren, D., Dong, G., et al. (2016). White stripe leaf 12 (WSL12), encoding a nucleoside diphosphate kinase 2 (OsNDPK2), regulates chloroplast development and abiotic stress response in rice (Oryza sativa L.). Mol Breed 36, 57.</li>
+<li>Yin, X., Huang, L., Zhang, X., Wang, M., Xu, G., and Xia, X. (2015). OsCML4 improves drought tolerance through scavenging of reactive oxygen species in rice. J Plant Biol 58, 68-73.</li>
+<li>Yokotani, N., Ichikawa, T., Kondou, Y., Iwabuchi, M., Matsui, M., Hirochika, H., and Oda, K. (2013). Role of the rice transcription factor JAmyb in abiotic stress response. J Plant Res 126, 131-139.</li>
+<li>Yu, J., Lai, Y., Wu, X., Wu, G., and Guo, C. (2016). Overexpression of OsEm1 encoding a group I LEA protein confers enhanced drought tolerance in rice. Biochem Biophys Res Commun 478, 703-709.</li>
+<li>Yu, J., Li, Y., Tang, W., Liu, J., Lu, B., and Liu, Y. (2014). The Accumulation of Glycine Betaine Is Dependent on Choline Monooxygenase (OsCMO), Not on Phosphoethanolamine N-Methyltransferase (OsPEAMT1), in Rice (Oryza sativa L. ssp. japonica). Plant Mol Biol Rep 32, 916-922.</li>
+<li>Yu, R.M., Wong, M.M., Jack, R.W., and Kong, R.Y. (2005). Structure, evolution and expression of a second subfamily of protein phosphatase 2A catalytic subunit genes in the rice plant (Oryza sativa L.). Planta 222, 757-768.</li>
+<li>Yu, R.M., Zhou, Y., Xu, Z.F., Chye, M.L., and Kong, R.Y. (2003). Two genes encoding protein phosphatase 2A catalytic subunits are differentially expressed in rice. Plant Mol Biol 51, 295-311.</li>
+<li>Yuan, X., Sun, H., Tang, Z., Tang, H., Zhang, H., and Huang, J. (2016). A Novel Little Membrane Protein Confers Salt Tolerance in Rice (Oryza sativa L.). Plant Mol Biol Rep 34, 524-532.</li>
+<li>Zang, A., Xu, X., Neill, S., and Cai, W. (2010). Overexpression of OsRAN2 in rice and Arabidopsis renders transgenic plants hypersensitive to salinity and osmotic stress. J Exp Bot 61, 777-789.</li>
+<li>Zhang, C., Zheng, J., Qian, F., Ma, H., and Xie, X. (2012a). Expression patterns of one tandem zinc finger protein gene OsDOS in rice (in Chinese). Shandong Agricultural Sciences 44, 7-12.</li>
+<li>Zhang, C.J., Zhao, B.C., Ge, W.N., Zhang, Y.F., Song, Y., Sun, D.Y., and Guo, Y. (2011a). An apoplastic h-type thioredoxin is involved in the stress response through regulation of the apoplastic reactive oxygen species in rice. Plant Physiol 157, 1884-1899.</li>
+<li>Zhang, H., Niu, X., Liu, J., Xiao, F., Cao, S., and Liu, Y. (2013a). RNAi-directed downregulation of vacuolar H(+) -ATPase subunit a results in enhanced stomatal aperture and density in rice. PLoS One 8, e69046.</li>
+<li>Zhang, L., Tian, L.H., Zhao, J.F., Song, Y., Zhang, C.J., and Guo, Y. (2009a). Identification of an apoplastic protein involved in the initial phase of salt stress response in rice root by two-dimensional electrophoresis. Plant Physiol 149, 916-928.</li>
+<li>Zhang, S., Haider, I., Kohlen, W., Jiang, L., Bouwmeester, H., Meijer, A.H., Schluepmann, H., Liu, C.M., and Ouwerkerk, P.B. (2012b). Function of the HD-Zip I gene Oshox22 in ABA-mediated drought and salt tolerances in rice. Plant Mol Biol 80, 571-585.</li>
+<li>Zhang, X., Rao, X., Shi, H., Li, R., and Lu, Y. (2011b). Overexpression of a cytosolic glyceraldehyde-3-phosphate dehydrogenase gene OsGAPC3 confers salt tolerance in rice. Plant Cell Tiss Organ Cult 107, 1-11.</li>
+<li>Zhang, Y., Chen, C., Jin, X.F., Xiong, A.S., Peng, R.H., Hong, Y.H., Yao, Q.H., and Chen, J.M. (2009b). Expression of a rice DREB1 gene, OsDREB1D, enhances cold and high-salt tolerance in transgenic Arabidopsis. BMB Rep 42, 486-492.</li>
+<li>Zhang, Y., Lan, H., Shao, Q., Wang, R., Chen, H., Tang, H., Zhang, H., and Huang, J. (2016). An A20/AN1-type zinc finger protein modulates gibberellins and abscisic acid contents and increases sensitivity to abiotic stress in rice (Oryza sativa). J Exp Bot 67, 315-326.</li>
+<li>Zhang, Z., Zhang, Q., Wu, J., Zheng, X., Zheng, S., Sun, X., Qiu, Q., and Lu, T. (2013b). Gene knockout study reveals that cytosolic ascorbate peroxidase 2(OsAPX2) plays a critical role in growth and reproduction in rice under drought, salt and cold stresses. PLoS One 8, e57472.</li>
+<li>Zheng, J., Wang, Y., He, Y., Zhou, J., Li, Y., Liu, Q., and Xie, X. (2014). Overexpression of an S-like ribonuclease gene, OsRNS4, confers enhanced tolerance to high salinity and hyposensitivity to phytochrome-mediated light signals in rice. Plant Sci 214, 99-105.</li>
+<li>Zheng, X., Chen, B., Lu, G., and Han, B. (2009). Overexpression of a NAC transcription factor enhances rice drought and salt tolerance. Biochem Biophys Res Commun 379, 985-989.</li>
+<li>Zhou, X., Jenks, M.A., Liu, J., Liu, A., Zhang, X., Xiang, J., Zou, J., Peng, Y., and Chen, X. (2014). Overexpression of Transcription Factor OsWR2 Regulates Wax and Cutin Biosynthesis in Rice and Enhances its Tolerance to Water Deficit. Plant Mol Biol Rep 32, 719-731.</li>
+<li>Zhu, N., Cheng, S., Liu, X., Du, H., Dai, M., Zhou, D.X., Yang, W., and Zhao, Y. (2015). The R2R3-type MYB gene OsMYB91 has a function in coordinating plant growth and salt stress tolerance in rice. Plant Sci 236, 146-156.</li>
+<li>Zhuang, J., Jiang, H., Wang, F., Peng, R., Yao, Q., and Xiong, A. (2013). A Rice OsAP23, Functioning as an AP2 ERF Transcription Factor, Reduces Salt Tolerance in Transgenic Arabidopsis. Plant Mol Biol Rep 31, 1336-1345.</li>
+<li>Zou, J., Liu, A., Chen, X., Zhou, X., Gao, G., Wang, W., and Zhang, X. (2009). Expression analysis of nine rice heat shock protein genes under abiotic stresses and ABA treatment. J Plant Physiol 166, 851-861.</li>
+<li>Zou, J., Liu, C., Liu, A., Zou, D., and Chen, X. (2012). Overexpression of OsHsp17.0 and OsHsp23.7 enhances drought and salt tolerance in rice. J Plant Physiol 169, 628-635.</li>
+<li>Zou, M., Guan, Y., Ren, H., Zhang, F., and Chen, F. (2008). A bZIP transcription factor, OsABI5, is involved in rice fertility and stress tolerance. Plant Mol Biol 66, 675-683.</li>
+			</ol>
+		<div class="footer">
+			<h4>&copy; 2019 zgliwen</h4>
+		</div>
+	</body>
+</html>

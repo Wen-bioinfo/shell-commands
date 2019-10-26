@@ -1,0 +1,96 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Home page</title>
+		<!--<link type="text/css" rel="stylesheet" href="home.css" />-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			html {
+				height: 100%;
+			}
+			body {
+				min-height: 100%;
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+			.header {
+				padding: 80px;
+				text-align: center;
+			}
+			.navbar {
+				overflow: hidden;
+				background-color: #333;
+			}
+			.navbar a {
+				float: left;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 20px;
+				text-decoration: none;
+			}
+			.navbar a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			.row {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.side {
+				flex: 20%;
+				background-color: #f1f1f1;
+				padding: 20px;
+			}
+			.main {
+				flex: 80%;
+				padding-bottom: 100px;
+				background-color: white;
+				padding: 20px;
+			}
+			.footer {
+				padding: 20px;
+				text-align: center;
+				background: #f1f1f1;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="header">
+			<h1>Rice Salt Stress</h1>
+		</div>
+		
+		<div class="navbar">
+			<a href="#">Home</a>
+			<a href="Gene_plain.html">Gene</a>
+			<a href="QTL_plain.html">QTL</a>
+			<a href="genenetwork.html">Gene_network</a>
+		</div>
+		
+		<div class="row">
+			<div class="side">
+				<h2>Updates</h2>
+				<h3>2019-10-25</h3>
+				<p>Version 0.2</p>
+				<h3>2019-10-19</h3>
+				<p>Version 0.1</p>
+			</div>
+			<div class="main">
+				<p>
+				  <img src="salt_gene_191025.svg" width="100%" height="100%" style="z-index:-100">
+				</p>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<h4>&copy; 2019 zgliwen</h4>
+		</div>
+		
+	</body>
+</html>
